@@ -17,24 +17,24 @@ public class Pizza {
 
     public Pizza(Boolean isVeg){
         if(isVeg){
-            this.basePrice=300;
-            this.toppingsPrice=70;
+            basePrice=300;
+            toppingsPrice=70;
         }
         else{
-            this.basePrice=400;
-            this.toppingsPrice=120;
+            basePrice=400;
+            toppingsPrice=120;
         }
-        this.bagPrice=20;
-        this.cheesePrice=80;
+        bagPrice=20;
+        cheesePrice=80;
 
-        this.isBagAdded=false;
-        this.isBillGenerated=false;
-        this.isCheeseAdded=false;
-        this.isToppingsAdded=false;
+        isBagAdded=false;
+        isBillGenerated=false;
+        isCheeseAdded=false;
+        isToppingsAdded=false;
 
         totalPrice=basePrice;
 
-        bill= "Base Price Of The Pizza: "+basePrice+"\n";
+        bill = "Base Price Of The Pizza: "+ basePrice + "\n";
 
     }
 
@@ -71,16 +71,18 @@ public class Pizza {
         // your code goes here
 
         if(isBillGenerated==false){
-            if(isCheeseAdded){
+
+            if(isCheeseAdded==true){
                bill=bill+"Extra Cheese Added: "+cheesePrice+"\n";
             }
-            if(isToppingsAdded){
+            if(isToppingsAdded==true){
                 bill=bill+"Extra Toppings Added: "+toppingsPrice+"\n";
             }
-            if(isBagAdded){
-                bill=bill+"Paperbag Added: "+bagPrice+"\n";
+            if(isBagAdded==true){
+                bill=bill + "Paperbag Added: "+bagPrice + "\n";
             }
-            bill=bill+"Total Price: "+totalPrice+"\n";
+            bill= bill + "Total Price: "+totalPrice+"\n";
+
             isBillGenerated=true;
         }
         return bill;
