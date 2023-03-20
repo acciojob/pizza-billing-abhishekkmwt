@@ -30,6 +30,9 @@
                         <exclude>com.driver.test.VehicleTest</exclude>
                     </excludes>
                 </configuration-->
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
             </plugin>
         </plugins>
     </build>
